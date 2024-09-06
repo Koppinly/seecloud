@@ -1,0 +1,44 @@
+/* styles.css */
+
+/* General box-sizing for all elements */
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+/* Apply styles to the body */
+body {
+    display: flex; /* Use Flexbox */
+    flex-direction: column; /* Arrange children in a column */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    height: 100vh; /* Use full viewport height */
+    padding: 0 2rem;
+    margin: 0; /* Remove default margin */
+    font-size: 16px; /* Set base font size */
+    font-family: "Press Start 2P", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, Noto Sans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 400; /* Regular font weight */
+    line-height: 1.5; /* Line height for better readability */
+    color: #212529; /* Text color */
+    background-color: #fff; /* Background color */
+    -webkit-font-smoothing: antialiased; /* Smooth font rendering */
+    text-align: center; /* Center text */
+}
+
+/* Header and Footer Styles */
+header, footer {
+    padding: 20px; /* Add padding for spacing */
+}
+
+/* Main Content Styles */
+main {
+    background-color: #f8f9fa; /* Light gray background for the main content */
+    padding: 1rem; /* Padding for main content */
+    border-radius: 8px; /* Rounded corners */
+    width: 100%; /* Full width */
+    max-width: 600px; /* Max width for larger screens */
+}
+
+/* Heading Styles */
+h1 {
+    margin: 0; /* Remove default margin for h1 */
+}
