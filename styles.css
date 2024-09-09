@@ -24,21 +24,61 @@ body {
     text-align: center; /* Center text */
 }
 
-/* Header and Footer Styles */
+h1 {
+    text-size: 20px;
+}
+
+.nes-logo {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 40px;
+}
+
 header, footer {
+    text-align: center; /* Center text in header and footer */
     padding: 20px; /* Add padding for spacing */
 }
 
-/* Main Content Styles */
-main {
-    background-color: #f8f9fa; /* Light gray background for the main content */
-    padding: 1rem; /* Padding for main content */
-    border-radius: 8px; /* Rounded corners */
-    width: 100%; /* Full width */
-    max-width: 600px; /* Max width for larger screens */
+/* Header Container Styles */
+header > .container {
+    display: flex; /* Use Flexbox */
+    align-items: baseline; /* Align items to baseline */
+    max-width: 980px; /* Maximum width for the header */
+    margin: 0 auto; /* Center the header container */
+    padding-top: 1rem; /* Add top padding */
+    transition: all 0.2s ease; /* Transition for smoothness */
 }
 
-/* Heading Styles */
-h1 {
-    margin: 0; /* Remove default margin for h1 */
+/* Flexbox for Header Content */
+.container {
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align items */
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    header > .container {
+        margin: 0 0.5rem; /* Adjust margin for smaller screens */
+    }
+}
+
+@media screen and (max-width: calc(980px - 4rem)) {
+    header > .container {
+        margin: 0 4rem; /* Adjust margin for medium screens */
+    }
+}
+/* Main Content Styles */
+main {
+    flex: 1; /* Allow the main section to grow and fill the space */
+    padding: 1rem; /* Padding for main content */
+    background-color: #f8f9fa; /* Light gray background for the main content */
+    border-radius: 8px; /* Rounded corners */
+}
+
+
+
+.right_align {
+    text-align: right;
 }

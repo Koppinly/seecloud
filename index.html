@@ -1,26 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>8-bit Site</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nes.css@2.0.0/css/nes.min.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./node_modules/nes.css/css/nes.min.css">
+    <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
+
 </head>
+
 <body>
-    <header class="nes-container with-title is-rounded">
-        <h1 class="title">Welcome to My 8-bit Site</h1>
+    <header class="nes-text is-primary is-dark">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="https://nostalgic-css.github.io/NES.css/">
+                    <h1>
+                        <i class="snes-jp-logo brand-logo"></i>
+                        See Jaykay
+                    </h1>
+                </a>
+                <p>NES-style CSS Framework.</p>
+            </div>
+
+        </div>
     </header>
 
+    <div class="right-align">
+        <p class="bubble nes-balloon from-left nes-pointer">
+            Hello!
+        </p>
+    </div>
     <main>
         <section class="nes-container with-title">
             <h2 class="title">Feature Experimentation</h2>
-            <p>This site uses Optimizely feature flags to run experiments.</p>
+            <div class="lists">
+                <ul class="nes-list is-disc">
+                    <li>These are a few games.</li>
+                    <li>They all run on feature flags.</li>
+                    <li>And they all are built with Optimizely FX.</li>
         </section>
+
     </main>
 
     <footer>
-        <p>© 2024 My 8-bit Site</p>
+        <p>© 2024 See Jaykay</p>
     </footer>
 </body>
+
 </html>
