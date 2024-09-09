@@ -73,12 +73,18 @@ header > .container {
 main {
     flex: 1; /* Allow the main section to grow and fill the space */
     padding: 1rem; /* Padding for main content */
-    background-color: #f8f9fa; /* Light gray background for the main content */
+    background-color: #d3d3d3; /* Light gray background for the main content */
     border-radius: 8px; /* Rounded corners */
+    margin-top: 1rem;
 }
-
 
 
 .right_align {
     text-align: right;
+}
+
+.gamebox {
+    flex: auto;
+    padding: 1rem;
+    margin: 1rem;
 }
