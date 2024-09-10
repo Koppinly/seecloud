@@ -6,34 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>8-bit Site</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="./node_modules/nes.css/css/nes.min.css">
-    <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
+    <link href="nes.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
-    <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
+
 
 </head>
 
 <body>
-    <header class="nes-text is-primary is-dark">
-        <div class="container">
-            <div class="nav-brand">
-                <a href="https://nostalgic-css.github.io/NES.css/">
-                    <h1>
-                        <i class="snes-jp-logo brand-logo"></i>
-                        See Jaykay
-                    </h1>
-                </a>
-                <p>NES-style CSS Framework.</p>
-            </div>
-
-        </div>
-    </header>
+    <table class="header">
+        <tbody>
+            <tr>
+                <td colspan="2" rowspan="2" class="width-auto">
+                    <h1 class="title">See Jaykay</h1>
+                    <span class="subtitle">A minimalist design exploration</span>
+                </td>
+                <th>Version</th>
+                <td class="width-min">v1.1.0</td>
+            </tr>
+            <tr>
+                <th>Updated</th>
+                <td class="width-min"><time>2024-09-10</time></td>
+            </tr>
+            <tr>
+                <th class="width-min">Author</th>
+                <td class="width-auto"><a href="#"><cite>Connor Koppin</cite></a></td>
+                <th class="width-min">License</th>
+                <td>...</td>
+            </tr>
+        </tbody>
+    </table>
 
     <div class="right-align">
-        <p class="bubble nes-balloon from-left nes-pointer">
+        <p class="nes-balloon from-left nes-pointer">
             Hello!
         </p>
     </div>
+    <main>
     <section class="nes-container with-title">
         <h2 class="title">Feature Experimentation</h2>
         <div class="lists">
@@ -42,17 +50,27 @@
                 <li>They all run on feature flags.</li>
                 <li>And they all are built with Optimizely FX.</li>
     </section>
-    <main>
-        <div class="gamebox nes-container with-title">
-           <p class="game_title">Greenlight</p>
-        </div>
-        <div class="gamebox nes-container with-title">
-            <p class="game_title"> Game #2</p>
-         </div>
-         <div class="gamebox nes-container with-title">
-            <p class="game_title"> Game #3</p>
-         </div>
 
+        <div>
+            <div class="nes-container with-title">
+                <a href="https://koppinly.github.io/react-sdk/" target="_blank" style="text-decoration: none;">
+                    <button type="button" class="game_title nes-btn is-success">
+                        Greenlight
+                    </button>
+                </a>
+                <p class="game_info">Greenlight is a REACT game, which runs on the Feature Experimentation React SDK</p>
+            </div>
+            
+            
+            <div class="nes-container with-title">
+                <a href="google.com" target="_blank">
+                    <button type="button" class="game_title nes-btn is-primary">Snake, Forthcoming</button>
+                  </a>
+            </div>
+            <div class="nes-container with-title">
+                <p class="game_title"> Game #3</p>
+            </div>
+        </div>
     </main>
 
     <footer>

@@ -1,90 +1,119 @@
-/* styles.css */
+:root {
+    --font-family: "JetBrains Mono", monospace;
+    --line-height: 1.20rem;
+    --border-thickness: 2px;
+    --text-color: #000000;
+    --text-color-alt: #666;
+    --background-color: #d3d3d3;
+    --background-color-alt: #eee;
+    --font-weight-normal: 500;
+    --font-weight-medium: 600;
+    --font-weight-bold: 800;
+}
 
-/* General box-sizing for all elements */
-*, ::after, ::before {
+*,
+::after,
+::before {
     box-sizing: border-box;
 }
 
-/* Apply styles to the body */
 body {
-    display: flex; /* Use Flexbox */
-    flex-direction: column; /* Arrange children in a column */
-    justify-content: center; /* Center items vertically */
-    align-items: center; /* Center items horizontally */
-    height: 100vh; /* Use full viewport height */
-    padding: 0 2rem;
-    margin: 0; /* Remove default margin */
-    font-size: 16px; /* Set base font size */
-    font-family: "Press Start 2P", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, Noto Sans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    font-weight: 400; /* Regular font weight */
-    line-height: 1.5; /* Line height for better readability */
-    color: #212529; /* Text color */
-    background-color: #fff; /* Background color */
-    -webkit-font-smoothing: antialiased; /* Smooth font rendering */
-    text-align: center; /* Center text */
-}
-
-h1 {
-    text-size: 20px;
-}
-
-.nes-logo {
+    display: flex;
     position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 40px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0 2rem; /* Side padding */
+    max-width: 729px; /* Set a max width */
+     /* Allow full width within max width */
+    margin: 0 auto; /* Center the body on the page */
+    font-family: var(--font-family);
+    font-size: 16px;
+    line-height: var(--line-height);
+    color: var(--text-color);
+    background-color: var(--background-color);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
 }
 
-header, footer {
-    text-align: center; /* Center text in header and footer */
-    padding: 20px; /* Add padding for spacing */
+.header {
+    width: 100%;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border-collapse: collapse;
+    margin: 2rem 0;
 }
 
-/* Header Container Styles */
-header > .container {
-    display: flex; /* Use Flexbox */
-    align-items: baseline; /* Align items to baseline */
-    max-width: 980px; /* Maximum width for the header */
-    margin: 0 auto; /* Center the header container */
-    padding-top: 1rem; /* Add top padding */
-    transition: all 0.2s ease; /* Transition for smoothness */
+.header th,
+.header td {
+    border: var(--border-thickness) solid var(--text-color);
+    padding: 8px;
+    text-align: left;
+    min-height: 40px;
 }
 
-/* Flexbox for Header Content */
-.container {
-    display: flex; /* Flexbox layout */
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center align items */
+.title {
+    font-size: 1.5rem;
+    margin: 0;
 }
 
-/* Media Queries */
-@media screen and (max-width: 768px) {
-    header > .container {
-        margin: 0 0.5rem; /* Adjust margin for smaller screens */
-    }
+.subtitle {
+    font-size: 0.8rem;
+    color: var(--text-color-alt);
 }
 
-@media screen and (max-width: calc(980px - 4rem)) {
-    header > .container {
-        margin: 0 4rem; /* Adjust margin for medium screens */
-    }
-}
-/* Main Content Styles */
 main {
-    flex: 1; /* Allow the main section to grow and fill the space */
-    padding: 1rem; /* Padding for main content */
-    background-color: #d3d3d3; /* Light gray background for the main content */
-    border-radius: 8px; /* Rounded corners */
+    flex: 1;
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+    padding: 2rem;
+    border-radius: 8px;
     margin-top: 1rem;
 }
 
+.gamebox {
+    margin: 1rem;
+}
 
-.right_align {
+
+.right-align {
     text-align: right;
 }
 
-.gamebox {
-    flex: auto;
-    padding: 1rem;
-    margin: 1rem;
+@media screen and (max-width: 980px) {
+    body {
+        padding: 0 1rem;
+    }
+    .header {
+        margin: 0 1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .title {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    body {
+        padding: 0 0.5rem;
+    }
+    .header {
+        width: calc(100% - 1rem);
+        margin-top: 2rem;
+    }
+    .header th,
+    .header td {
+        font-size: 14px;
+    }
+    .title {
+        font-size: 1rem;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
 }
