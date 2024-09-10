@@ -24,8 +24,8 @@ body {
     justify-content: flex-start;
     align-items: center;
     min-height: 100vh;
-    padding: 0 2rem; /* Side padding */
-    max-width: 729px; /* Set a max width */
+    /* padding: 0 4rem; Side padding */
+    max-width: calc(min(80ch, round(down, 100%, 1ch)));
      /* Allow full width within max width */
     margin: 0 auto; /* Center the body on the page */
     font-family: var(--font-family);
