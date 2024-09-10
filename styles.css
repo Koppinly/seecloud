@@ -11,22 +11,15 @@
     --font-weight-bold: 800;
 }
 
-*,
-::after,
-::before {
-    box-sizing: border-box;
-}
+
 
 body {
     display: flex;
-    position: relative;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
+    justify-content: center; /* Add this to center content vertically */
     min-height: 100vh;
-    /* padding: 0 4rem; Side padding */
-    max-width: calc(min(80ch, round(down, 100%, 1ch)));
-     /* Allow full width within max width */
+    max-width: 80ch; /* Simplified max-width */
     margin: 0 auto; /* Center the body on the page */
     font-family: var(--font-family);
     font-size: 16px;
