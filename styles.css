@@ -17,10 +17,10 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; /* Add this to center content vertically */
+    justify-content: center;
     min-height: 100vh;
-    max-width: 80ch; /* Simplified max-width */
-    margin: 0 auto; /* Center the body on the page */
+    max-width: 80ch;
+    margin: 0 auto !important; /* Added !important */
     font-family: var(--font-family);
     font-size: 16px;
     line-height: var(--line-height);
@@ -29,6 +29,7 @@ body {
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
 }
+
 
 .header {
     width: 100%;
@@ -109,4 +110,25 @@ main {
 footer {
     text-align: center;
     padding: 20px;
+}
+
+.code, kbd, samp {
+    font-family: "JetBrains Mono", monospace !important;
+    font-size: 1em;
+}
+
+.flex-container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between columns */
+    align-items: flex-start; /* Align items to the top */
+}
+
+/* Optional: To add some spacing between the columns */
+.lists {
+    margin-top: 1rem; /* Adjust as needed */
+}
+
+.nes-list {
+    margin-right: 1rem; /* Optional spacing between the list and bubble */
+    margin-top: 1rem;
 }

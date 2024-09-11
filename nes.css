@@ -16,16 +16,6 @@
    width: device-width;
  }
  
- article,
- aside,
- figcaption,
- figure,
- footer,
- header,
- hgroup,
- nav {
-   display: block;
- }
  
  
  [tabindex="-1"]:focus {
@@ -147,7 +137,6 @@
  }
  
  pre,
- code,
  kbd,
  samp {
    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
