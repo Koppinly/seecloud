@@ -180,3 +180,8 @@ footer {
 .main {
     margin-top: 1rem;
 }
+
+.resume {
+    display: flex;
+    align-items: flex-end;
+}
