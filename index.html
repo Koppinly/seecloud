@@ -15,11 +15,15 @@
 
 </head>
 <body>
-    <table class="header">
+    <table class="header w-100">
         <tbody>
             <tr>
-                <td colspan="2" rowspan="2" class="width-auto">
-                    <h1 class="title">seecloud</h1>
+                <td colspan="2" rowspan="2" class="align-middle">
+                    <!-- Title and Balloon in the same cell -->
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <h1 class="title">seecloud</h1>
+                        <div class="nes-balloon from-left nes-pointer">Let's Play!</div>
+                    </div>
                     <span class="subtitle">retro-future design</span>
                 </td>
                 <th>Version</th>
@@ -37,6 +41,7 @@
             </tr>
         </tbody>
     </table>
+    
     <main>
         <div class="main flex items-start space-y-1.5">
             <div class="flex-1">
@@ -98,7 +103,9 @@
           
             <!-- Headshot aligned to the right -->
             <div class="flex-shrink-0">
-              <img src="resource/Connor Koppin Headshot copy.JPEG" alt="Headshot" class="w-28 h-20 rounded-full object-cover img-thumbnail rounded float-start headshot">
+                <img src="resource/Connor Koppin Headshot copy.JPEG" 
+                     alt="Headshot" 
+                     class="img-fluid rounded-full object-cover img-thumbnail rounded float-start headshot">
             </div>
           </div>
 
@@ -118,9 +125,7 @@
                         <li>They all run on feature flags.</li>
                         <li>They all are built with Optimizely FX.</li>
                     </ul>
-                    <div class="right-align">
-                        <p class="nes-balloon from-left nes-pointer">Let's Play!</p>
-                    </div>
+                   
                 </div>
             </div>
         </section>
