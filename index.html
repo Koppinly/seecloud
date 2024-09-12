@@ -4,9 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>8-bit Site</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link href="nes.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+
+    
+
 </head>
 <body>
     <table class="header">
@@ -31,9 +36,37 @@
             </tr>
         </tbody>
     </table>
-
-
     <main>
+        <div class="main flex items-start space-y-1.5">
+            <div class="flex-1">
+              <h1 class="text-2xl font-bold">Connor Koppin</h1>
+              <p class="max-w-md text-pretty font-mono text-sm text-muted-foreground">Application Support Engineer with a proven track record in diagnosing and resolving technical issues for enterprise clients. Specialized in troubleshooting complex incidents and improving internal processes.</p>
+              
+              <div class="flex gap-x-1 pt-1 font-mono text-sm text-muted-foreground print:hidden">
+                <a href="mailto:connor.koppin@gmail.com" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground size-8">
+                  <i class="fas fa-envelope fa-2x"></i>
+                </a>
+                <a href="tel:+164143043936" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground size-8">
+                  <i class="fa-solid fa-square-phone-flip fa-2x"></i>
+                </a>
+                <a href="https://github.com/koppinly" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground size-8">
+                  <i class="fa-brands fa-github fa-2x"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/connor-koppin-48284496/" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground size-8">
+                  <i class="fa-brands fa-linkedin fa-2x"></i>
+                </a>
+              </div>
+            </div>
+          
+            <!-- Headshot aligned to the right -->
+            <div class="flex-shrink-0">
+              <img src="resource/Connor Koppin Headshot copy.JPEG" alt="Headshot" class="w-28 h-20 rounded-full object-cover img-thumbnail rounded float-start headshot">
+            </div>
+          </div>
+          
+        
+          
+
         <section class="nes-container with-title">
             <h2 class="title nes-balloon">Feature Experimentation</h2>
             <div class="lists">
@@ -62,12 +95,10 @@
                 <a href="https://www.google.com" target="_blank">
                     <button type="button" class="game_title nes-btn is-primary">Snake, Forthcoming</button>
                 </a>
+                <p class="game_info">Snake, forthcoming, is a game that adjusts dynamically according to Optimizely Feature Flag settings!</p>
             </div>
         </div>
+        <p class="copyright">© 2024 seecloud</p>
     </main>
-
-    <footer>
-        <p>© 2024 seecloud</p>
-    </footer>
 </body>
 </html>

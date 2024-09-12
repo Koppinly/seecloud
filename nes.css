@@ -146,8 +146,7 @@
  pre {
    margin-top: 0;
    margin-bottom: 1rem;
-   overflow: auto;
-   -ms-overflow-style: scrollbar;
+
  }
  
  figure {
@@ -1071,6 +1070,7 @@
    border-color: black;
    border-style: solid;
    border-width: 4px;
+   margin-top: 1rem;
  }
  
  .nes-container > :last-child {
