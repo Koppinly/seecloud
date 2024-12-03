@@ -1,0 +1,93 @@
+:root {
+    --font-family: "JetBrains Mono", monospace;
+    --line-height: 1.20rem;
+    --border-thickness: 2px;
+    --text-color: #000000;
+    --text-color-alt: #666;
+    --background-color: #d3d3d3;
+    --background-color-alt: #eee;
+    --font-weight-normal: 500;
+    --font-weight-medium: 600;
+    --font-weight-bold: 800;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    max-width: 80ch;
+    margin: 0 auto;
+    font-family: var(--font-family);
+    font-size: 16px;
+    line-height: var(--line-height);
+    color: var(--text-color);
+    background-color: var(--background-color);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .form-container {
+    background-color: var(--background-color-alt);
+    border: var(--border-thickness) solid var(--text-color);
+    border-radius: 8px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  label {
+    font-weight: var(--font-weight-medium);
+    margin-top: 1rem;
+    display: block;
+  }
+
+  input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    border: var(--border-thickness) solid var(--text-color-alt);
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+
+  button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--text-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: var(--font-weight-bold);
+    font-size: 1rem;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: var(--text-color-alt);
+  }
+
+  #results {
+    margin-top: 2rem;
+    text-align: left;
+    font-family: var(--font-family);
+  }
+
+  .results-container {
+    background-color: var(--background-color-alt);
+    border: var(--border-thickness) solid var(--text-color);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 1rem;
+    width: 100%;
+    max-width: 600px;
+  }
