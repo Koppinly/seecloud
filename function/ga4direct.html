@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GA4 Integration / Direct GTAG</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-81FTRPLHVK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-81FTRPLHVK');
+</script>
+</head>
+<body>
+    <div class="container">
+        <header class="global-header">
+            <h1>GA4 Integration / Direct GTAG</h1>
+        </header>
+        <nav class="global-nav">
+            <div class="nav-widget text-center" style="display: flex; align-items: center; gap: 1.5rem;">
+                <a href="../index.html" class="home-icon" title="Home" style="font-size:1.5rem; color:inherit;">
+                    <i class="fa fa-home"></i>
+                </a>
+                <div style="flex:1;"></div>
+                <div class="explore-dropdown" style="position:relative;">
+                    <span class="menu-trigger">
+                        Explore
+                        <i class="fas fa-chevron-down ms-1"></i>
+                    </span>
+                    <div class="nav-menu">
+                        <a href="applications.html" class="nav-link">Applications</a>
+                        <a href="function.html" class="nav-link">Function</a>
+                        <a href="#page2" class="nav-link">Games (dead)</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <main>
+            <p>This is the landing page for GA4 Integration using direct GTAG implementation.</p>
+        </main>
+        <footer>
+            <p class="copyright text-center py-3">© 2024 seecloud</p>
+        </footer>
+    </div>
+</body>
+</html>
