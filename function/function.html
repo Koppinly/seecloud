@@ -11,7 +11,7 @@
     <script src="https://cdn.optimizely.com/js/4802505738027008.js"></script>
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
@@ -43,53 +43,21 @@
     <!-- Container for Content -->
     <div class="container flex-grow-1" style="max-width: 1000px;">
         <!-- New Header Section -->
-        <header class="global-header container-fluid px-4 py-3">
-            <nav class="row d-flex justify-content-between align-items-center position-relative">
-                <!-- Left Section - Branding -->
-                <div class="col-4 branding-section">
-                    <div class="d-flex align-items-center gap-3">
-                        <h1 class="brand-title mb-0">SEECLOUD!</h1>
-                        <span class="version-badge">v1.1.1</span>
-                    </div>
-                </div>
-
-                <!-- Centered Navigation Widget -->
-                <div class="nav-widget text-center" style="display: flex; align-items: center; gap: 1.5rem;">
-                    <a href="../index.html" class="home-icon" title="Home"
-                        style="font-size:1.5rem; color:inherit;">
-                        <i class="fa fa-home"></i>
-                    </a>
-                    <div style="flex:1;"></div>
-                    <div class="explore-dropdown" style="position:relative;">
-                        <span class="menu-trigger">
-                            Explore
-                            <i class="fas fa-chevron-down ms-1"></i>
-                        </span>
-                        <div class="nav-menu">
-                            <a href="applications.html" class="nav-link">Applications</a>
-                            <a href="function.html" class="nav-link">Function</a>
-                            <a href="#page2" class="nav-link">Games (dead)</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Right Section - Metadata -->
-                <div class="col-4 metadata-section">
-                    <div class="d-flex flex-column align-items-end">
-                        <span class="metadata-item">
-                            Updated: <time>2025-01-31</time>
-                        </span>
-                        <span class="metadata-item">
-                            Author: <a href="#" class="author-link">Connor Koppin</a>
-                        </span>
-                        <span class="metadata-item">
-                            License: <span class="license-status">Open</span>
-                        </span>
-                    </div>
-                </div>
+        <header class="global-header w-100">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4 rounded"
+                style="box-shadow: 0 1px 6px rgba(0,0,0,0.03);">
+                <a href="../index.html" class="navbar-brand home-icon" title="Home"
+                    style="font-size:1.5rem; color:inherit;">
+                    <i class="fa fa-home"></i>
+                </a>
+                <span class="navbar-text ml-2 font-weight-bold"
+                    style="font-family: 'Inconsolata', monospace; font-size: 1.3rem; letter-spacing: -0.03em;">SeeCloud</span>
+                <ul class="navbar-nav ml-4">
+                    <li class="nav-item"><a class="nav-link" href="applications.html">Applications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="function.html">Function</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#page2">Games (dead)</a></li>
+                </ul>
             </nav>
-
-            <!-- Decorative line -->
             <div class="header-line mt-3"></div>
         </header>
 
@@ -98,11 +66,11 @@
             <div class="row mb-4 mt-4 justify-content-center">
                 <!-- Bio and Info Section -->
                 <div class="order-2 order-md-1">
-                    <a href="function/ga4direct.html">
+                    <a href="ga4direct.html">
                         <button>GA4 Integration / Direct GTAG</button>
                     </a>
                     <br>
-                    <a href="function/ga4_via_gtag.html">
+                    <a href="ga4_via_gtag.html">
                         <button class="mt-4">GA4 Integrated VIA GTM</button>
                     </a>
                 </div>
