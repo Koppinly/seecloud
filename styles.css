@@ -54,25 +54,16 @@ button:hover {
     color: var(--text-color-alt);
 }
 
-.main {
-    flex: 1;
-    max-height: calc(100vh - 100px);
-    padding-bottom: 2rem;
-    border-radius: 8px;
-    width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
 /* Add these new styles */
 .container {
-    height: calc(100vh - 90px);
-    /* Reduced from previous 60px subtraction */
+    min-height: 80vh;
+    height: auto;
     padding-top: 1rem;
 }
 
 main {
     flex: 1;
+    min-height: 60vh;
     overflow-y: hidden;
     padding-bottom: 1rem;
 
@@ -198,13 +189,20 @@ footer {
 
 .social-icons-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(48px, 1fr));
     gap: 1rem;
-    max-width: 240px;
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    justify-items: center;
 }
 
 .icon-btn {
-    width: 100%;
+    width: 48px;
+    height: 48px;
+    min-width: 40px;
+    min-height: 40px;
+    max-width: 100%;
     padding: 0.8rem;
     display: flex;
     align-items: center;
