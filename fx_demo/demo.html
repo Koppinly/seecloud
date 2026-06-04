@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FX Demo — seecloud.io</title>
+    <link rel="stylesheet" href="/styles.css">
+    <style>
+        .demo-container {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 0 24px;
+        }
+        .decision-card {
+            background: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 24px;
+            margin-top: 24px;
+        }
+        .decision-card h2 {
+            margin-top: 0;
+        }
+        .flag-enabled {
+            display: inline-block;
+            background: #28a745;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        .flag-disabled {
+            display: inline-block;
+            background: #dc3545;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        .data-row {
+            display: flex;
+            gap: 12px;
+            padding: 8px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .data-row:last-child {
+            border-bottom: none;
+        }
+        .data-label {
+            font-weight: 600;
+            min-width: 160px;
+            color: #555;
+        }
+        .data-value {
+            color: #222;
+            font-family: monospace;
+        }
+        pre {
+            background: #1e1e1e;
+            color: #d4d4d4;
+            padding: 16px;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-container">
+        <h1>Optimizely Feature Experimentation — Edge Demo</h1>
+        <p>This page demonstrates FX flag decisions made at the Cloudflare edge before the page is served.</p>
+
+        <div class="decision-card">
+            <h2>User Context</h2>
+            <div class="data-row">
+                <span class="data-label">User ID</span>
+                <span class="data-value" id="user-id">loading...</span>
+            </div>
+        </div>
+
+        <div class="decision-card">
+            <h2>Flag: <code>test_flag</code></h2>
+            <div class="data-row">
+                <span class="data-label">Status</span>
+                <span id="flag-status">loading...</span>
+            </div>
+            <div class="data-row">
+                <span class="data-label">Variation Key</span>
+                <span class="data-value" id="variation-key">loading...</span>
+            </div>
+            <div class="data-row">
+                <span class="data-label">Rule Key</span>
+                <span class="data-value" id="rule-key">loading...</span>
+            </div>
+            <div class="data-row">
+                <span class="data-label">Variables</span>
+                <span class="data-value" id="variables">loading...</span>
+            </div>
+            <div class="data-row">
+                <span class="data-label">Reasons</span>
+                <span class="data-value" id="reasons">loading...</span>
+            </div>
+        </div>
+
+        <div class="decision-card">
+            <h2>Raw Decision</h2>
+            <pre id="raw-decision">loading...</pre>
+        </div>
+    </div>
+
+    <script>
+        // Decision data injected by the Cloudflare Worker
+        const decision = window.__FX_DECISION__ || null;
+        const userId = window.__FX_USER_ID__ || 'unknown';
+
+        if (decision) {
+            document.getElementById('user-id').textContent = userId;
+            document.getElementById('flag-status').innerHTML = decision.enabled
+                ? '<span class="flag-enabled">ENABLED</span>'
+                : '<span class="flag-disabled">DISABLED</span>';
+            document.getElementById('variation-key').textContent = decision.variationKey || 'none';
+            document.getElementById('rule-key').textContent = decision.ruleKey || 'none';
+            document.getElementById('variables').textContent = JSON.stringify(decision.variables) || '{}';
+            document.getElementById('reasons').textContent = decision.reasons?.join(', ') || 'none';
+            document.getElementById('raw-decision').textContent = JSON.stringify(decision, null, 2);
+        } else {
+            document.querySelectorAll('.data-value, #flag-status, #raw-decision').forEach(el => {
+                el.textContent = 'No decision data — worker may not be configured yet.';
+            });
+        }
+    </script>
+</body>
+</html>

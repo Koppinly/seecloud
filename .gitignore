@@ -1,3 +1,19 @@
 .wrangler/
 node_modules/
 .DS_Store
+
+# Cloudflare worker source + experiments / scratch — not part of the static site
+local/
+edge-delivery/
+__cloudflare_base/
+cloudflare-worker-template/
+fx-worker/
+optimizely-edge-delivery-validation/
+package.json
+package-lock.json
+
+# demo/ is served by the FX worker, not by Pages
+demo/
+
+# Note: fx_demo/ MUST be tracked — the FX worker fetches /fx_demo/demo from
+# the Pages origin, so its contents must be deployed.
