@@ -17,3 +17,8 @@ demo/
 
 # Note: fx_demo/ MUST be tracked — the FX worker fetches /fx_demo/demo from
 # the Pages origin, so its contents must be deployed.
+
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
